@@ -533,7 +533,7 @@ section {
     height: 5px;
     position: relative;
     display: block;
-    background-color: #D45113;
+    background-color: var(--secondary);
 }
 
 .skill:nth-child(1) .skill-bar {
