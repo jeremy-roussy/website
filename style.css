@@ -217,12 +217,6 @@ section {
 
 
 #top {
-    /*
-    background-image: url("./assets/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    */
     flex-direction: column;
 }
 
@@ -604,7 +598,7 @@ section {
     display: grid;
     grid-auto-flow: column;
     gap: 25px;
-    grid-auto-columns: 400px;
+    grid-auto-columns: min(400px, 100%);
     align-items: center;
     overflow-x: auto;
     overscroll-behavior-inline: contain;    
