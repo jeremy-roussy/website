@@ -4,6 +4,8 @@
     --red-crayola: rgb(238, 66, 102);
 
     --font-color: rgb(255, 255, 255);
+
+    --footer-height: 50px;
 }
 
 * {
@@ -343,4 +345,106 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 0.785rem;
+}
+
+/* ---------------------------------------- Contact Section ---------------------------------------- */
+
+#contact {
+    background: linear-gradient(0deg, transparent var(--footer-height), var(--secondary) var(--footer-height), var(--secondary) calc(3 * var(--footer-height)), transparent calc(3 * var(--footer-height)));
+    align-items: end;
+}
+
+#contact .contact-info-item {
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+}
+
+#contact .contact-info-item .icon {
+    display: inline-block;
+}
+
+#contact .contact-info-item .icon .fa-solid {
+    font-size: 25px;
+    color: var(--secondary);
+}
+
+.waves {
+    margin-bottom: var(--footer-height);
+    width: 100%;
+    height: var(--footer-height);
+}
+
+.parallax > use {
+    fill: var(--primary);
+
+    -webkit-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    -moz-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    -ms-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    -o-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    opacity: 0.3;
+
+    -webkit-animation-delay: -2s;
+    -moz-animation-delay: -2s;
+    -ms-animation-delay: -2s;
+    -o-animation-delay: -2s;
+    animation-delay: -2s;
+
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -ms-animation-duration: 7s;
+    -o-animation-duration: 7s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    opacity: 0.5;
+
+    -webkit-animation-delay: -3s;
+    -moz-animation-delay: -3s;
+    -ms-animation-delay: -3s;
+    -o-animation-delay: -3s;
+    animation-delay: -3s;
+
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+    -ms-animation-duration: 10s;
+    -o-animation-duration: 10s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+    -moz-animation-delay: -4s;
+    -ms-animation-delay: -4s;
+    -o-animation-delay: -4s;
+    animation-delay: -4s;
+
+    -webkit-animation-duration: 13s;
+    -moz-animation-duration: 13s;
+    -ms-animation-duration: 13s;
+    -o-animation-duration: 13s;
+    animation-duration: 13s;
+}
+
+@keyframes move-forever {
+    0% {
+        -webkit-transform: translateX(-90px);
+        -moz-transform: translateX(-90px);
+        -ms-transform: translateX(-90px);
+        -o-transform: translateX(-90px);
+        transform: translateX(-90px);
+    }
+
+    100% { 
+        -webkit-transform: translateX(85px);
+        -moz-transform: translateX(85px);
+        -ms-transform: translateX(85px);
+        -o-transform: translateX(85px);
+        transform: translateX(85px);
+    }
 }
