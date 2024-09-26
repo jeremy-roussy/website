@@ -146,7 +146,7 @@ section {
     color: var(--font-color);
 }
 
-/* -------------------- First Section -------------------- */
+/* ---------------------------------------- First Section ---------------------------------------- */
 
 #top {
     flex-direction: column;
@@ -278,4 +278,69 @@ section {
     100% {
         opacity: 1;
     } 
+}
+
+/* ---------------------------------------- About Section ---------------------------------------- */
+
+#about {
+    flex-direction: column;    
+}
+
+#about > .container {
+    width: 90%;
+    opacity: 0;
+
+    -webkit-transition-duration: 750ms;
+    -moz-transition-duration: 750ms;
+    -ms-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    transition-duration: 750ms;
+}
+
+#about > .container.show {
+    opacity: 1;
+}
+
+.timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    border-left: 2px solid var(--secondary);
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    margin: 5px 0 5px 0;
+}
+
+.timeline-item::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: -7px;
+    content: '';
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+
+.timeline-item:last-child {
+    border-image: linear-gradient(to bottom, var(--secondary) 60%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.timeline-item h2 {
+    color: var(--secondary);
+}
+
+.title::before {
+    color: var(--font-color);
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    top: 1em;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.785rem;
 }

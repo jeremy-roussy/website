@@ -91,3 +91,21 @@ window.addEventListener("resize", function() {
 
 init();
 animate();
+
+/* ---------------------------------------- Intersection Observer ---------------------------------------- */
+
+const options = {
+    root: null, // it is the viewport
+    threshold: 0.5,
+    rootMargin: "0px"
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        entry.target.classList.toggle('show', entry.isIntersecting);
+    })
+}, options);
+
+document.querySelectorAll(".container").forEach(container => {
+    observer.observe(container);
+});
