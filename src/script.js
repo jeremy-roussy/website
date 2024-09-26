@@ -109,3 +109,33 @@ const observer = new IntersectionObserver(function(entries, observer) {
 document.querySelectorAll(".container").forEach(container => {
     observer.observe(container);
 });
+
+/* ---------------------------------------- Toggle light and dark mode ---------------------------------------- */
+
+const toggle = document.getElementById("toggleLight");
+let primary = "rgb(33, 37, 41)";
+let secondary = "rgb(242, 100, 25)";
+
+toggle.addEventListener("click", function() {
+    this.classList.toggle("fa-moon");
+
+    if(this.classList.toggle("fa-sun")) {
+        document.documentElement.style.setProperty('--primary', 'rgb(255, 255, 255)');
+        document.documentElement.style.setProperty('--font-color', 'rgb(0, 0, 0)');
+        document.documentElement.style.setProperty('--border-color', 'rgba(0, 0, 0, 0.1)');
+
+        document.documentElement.style.setProperty('--card-bg-color', 'rgba(0, 0, 0, 0.015)');
+        document.documentElement.style.setProperty('--card-border-color', 'rgba(0, 0, 0, 0.1)');
+        document.documentElement.style.setProperty('--card-font-color', 'rgba(0, 0, 0, 0.5)');
+    } else {
+        document.documentElement.style.setProperty('--primary', 'rgb(33, 37, 41)');
+        document.documentElement.style.setProperty('--font-color', 'rgb(255, 255, 255)');
+        document.documentElement.style.setProperty('--border-color', 'rgba(255, 255, 255, 0.1)');
+
+        document.documentElement.style.setProperty('--card-bg-color', 'rgba(255, 255, 255, 0.015)');
+        document.documentElement.style.setProperty('--card-border-color', 'rgba(255, 255, 255, 0.1)');
+        document.documentElement.style.setProperty('--card-font-color', 'rgba(255, 255, 255, 0.5)');
+    }
+
+    document.getElementById("logo").classList.toggle('black');
+});

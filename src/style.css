@@ -6,6 +6,7 @@
     --font-color: rgb(255, 255, 255);
 
     --footer-height: 50px;
+    --color-fade-time: 1s;
 }
 
 * {
@@ -50,6 +51,12 @@ body {
     height: 100%;
     overflow: hidden;
     background-color: var(--primary);
+    
+    -webkit-transition: var(--color-fade-time);
+    -moz-transition: var(--color-fade-time);
+    -ms-transition: var(--color-fade-time);
+    -o-transition: var(--color-fade-time);
+    transition: var(--color-fade-time);
 }
 
 header {
@@ -60,6 +67,13 @@ header {
     background: var(--primary);
     border-bottom: 1px solid var(--secondary);
     z-index: 1;
+    z-index: 1;
+    
+    -webkit-transition: var(--color-fade-time);
+    -moz-transition: var(--color-fade-time);
+    -ms-transition: var(--color-fade-time);
+    -o-transition: var(--color-fade-time);
+    transition: var(--color-fade-time);
 }
 
 nav {
@@ -70,7 +84,7 @@ nav {
     font-size: 1rem;
     grid-template-rows: 100%;
     grid-template-columns: 75px auto 50px;
-    grid-template-areas: "logo nav .";
+    grid-template-areas: "logo nav mode";
 }
 
 nav > * {    
@@ -99,6 +113,12 @@ nav > ul > li > a {
     padding: 0.75rem;
     text-decoration: none !important;
     text-transform: uppercase;
+    
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 nav > ul > li > a:after {    
@@ -113,6 +133,13 @@ nav > ul > li > a:hover:after {
     width: 100%;
 }
 
+nav > i {
+    grid-area: mode;
+    color: var(--font-color);
+    width: 20px;
+    cursor: pointer;
+}
+
 nav > a {
     grid-area: logo;
     width: 40px;
@@ -121,6 +148,22 @@ nav > a {
 
 #logo {
     filter: invert(1);
+    
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
+}
+
+#logo.black {
+    filter: invert(0);
+    
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 main {
@@ -214,6 +257,12 @@ section {
     transform: rotate(45deg);
     border-right: 2px solid var(--font-color); 
     border-bottom: 2px solid var(--font-color);
+
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 .down-arrow-1 {
@@ -325,6 +374,12 @@ section {
     border: 2px solid var(--secondary);
     border-radius: 10px;
     background-color: var(--primary);
+    
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 .timeline-item:last-child {
@@ -345,6 +400,12 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 0.785rem;
+
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 /* ---------------------------------------- Contact Section ---------------------------------------- */
@@ -383,6 +444,12 @@ section {
     -ms-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
     -o-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+
+    -webkit-transition-duration: var(--color-fade-time);
+    -moz-transition-duration: var(--color-fade-time);
+    -ms-transition-duration: var(--color-fade-time);
+    -o-transition-duration: var(--color-fade-time);
+    transition-duration: var(--color-fade-time);
 }
 
 .parallax > use:nth-child(1) {
