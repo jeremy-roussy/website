@@ -4,7 +4,12 @@
     --red-crayola: rgb(238, 66, 102);
 
     --font-color: rgb(255, 255, 255);
-
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    --card-bg-color: rgba(255, 255, 255, 0.015);
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --card-font-color: rgba(255, 255, 255, 0.5);
+    
     --footer-height: 50px;
     --color-fade-time: 1s;
 }
@@ -407,6 +412,105 @@ section {
     -o-transition-duration: var(--color-fade-time);
     transition-duration: var(--color-fade-time);
 }
+
+/* ---------------------------------------- Portfolio Section ---------------------------------------- */
+
+#portfolio {
+    overflow: hidden;
+}
+
+#portfolio > .container {
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;
+    grid-auto-columns: min(400px, 100%);
+    align-items: center;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;    
+    opacity: 0;
+
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+
+    -webkit-transition-duration: 750ms;
+    -moz-transition-duration: 750ms;
+    -ms-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    transition-duration: 750ms;
+}
+
+#portfolio > .container.show {
+    opacity: 1;
+    
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(25px);
+}
+
+.card {
+    height: 100%;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: .25em;
+    color: var(--card-font-color);
+    display: flex;
+    flex-direction: column;
+    opacity: 0.75;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -ms-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.card:hover {
+    color: var(--font-color);
+    box-shadow: 0px 5px 10px 3px var(--border-color);
+    opacity: 1;
+}
+
+.card div:has(img) {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+#macbook {
+    margin: 25px;
+    width: calc(100% - 50px);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 10px;
+}
+
 
 /* ---------------------------------------- Contact Section ---------------------------------------- */
 
