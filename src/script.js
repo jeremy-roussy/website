@@ -139,3 +139,53 @@ toggle.addEventListener("click", function() {
 
     document.getElementById("logo").classList.toggle('black');
 });
+
+/* ---------------------------------------- Mobile navigation menu ---------------------------------------- */
+
+const trigger = document.getElementById("wrapper");
+const openTrigger = document.getElementById("menu-trigger");
+const closeTrigger = document.getElementById("close-trigger");
+
+let isAnimationFinish = true;
+
+function animation() {
+    for (let item of openTrigger.children) {
+        item.classList.toggle("hide");
+        item.classList.add("transition");
+        
+        setTimeout(function() {
+            item.classList.remove("transition");
+        }, 1000);
+    }
+
+    for (let item of closeTrigger.children) {
+        item.classList.toggle("show");
+        item.classList.add("transition");
+
+        setTimeout(function() {
+            item.classList.remove("transition");
+        }, 1000);
+    }
+}
+
+trigger.addEventListener("click", function() {
+    if(isAnimationFinish) {
+        isAnimationFinish = false;
+        
+        animation();
+        
+        document.getElementsByTagName("header")[0].classList.toggle("open");
+        
+        setTimeout(function() {
+            isAnimationFinish = true;
+        }, 1000);
+    }
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function() {
+        document.querySelector("header").classList.remove("open");
+
+        animation();
+    });
+});
