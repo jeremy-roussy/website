@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="transition">
         <div id="wrapper">
             <span id="menu-trigger">
               <i class="menu-trigger-bar top"></i>
@@ -33,13 +33,13 @@
 
         <nav id="navbar">
             <a class="nav-link" href="#top">
-                <img id="logo" src="./assets/logo.svg" alt="logo.svg">
+                <img id="logo" class="transition" src="./assets/logo.svg" alt="logo.svg">
             </a>
             <ul>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#skills">Skills</a></li>
-                <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a class="nav-link transition" href="#about">About</a></li>
+                <li><a class="nav-link transition" href="#skills">Skills</a></li>
+                <li><a class="nav-link transition" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-link transition" href="#contact">Contact</a></li>
             </ul>
             <i class="fa-solid fa-moon fa-lg" id="toggleLight"></i>
         </nav>
@@ -52,9 +52,9 @@
             <h1>Jeremy Roussy</h1>
             <h2>Back-end Java Developper</h2>
             <div id="arrows">
-                <span class="down-arrow-1"></span>
-                <span class="down-arrow-2"></span>
-                <span class="down-arrow-3"></span>
+                <span class="down-arrow-1 transition"></span>
+                <span class="down-arrow-2 transition"></span>
+                <span class="down-arrow-3 transition"></span>
             </div>
         </section>
 
@@ -113,6 +113,57 @@
         </section>
 
         <section id="skills" aria-labelledby="skills">
+            <div class="container">
+                <div class="skills_header">
+                    <button class="title transition"><span class="text">MY SKILLS</span></button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="744" height="423" viewBox="0 0 744 423" fill="none">
+                        <path d="M2 126.5V86H258V0M366.5 422.5V0M741.5 133V86H481.5V0" stroke="url(#paint_linear)" stroke-width="4"></path>
+                        <defs>
+                            <linearGradient id="paint_linear" x1="371.963" y1="12" x2="359.62" y2="389.388" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#f26419"></stop>
+                                <stop id="tree_gradient" class="transition" offset="1" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="technologies">
+                    <div class="front">
+                        <button class="transition">html</button>
+                        <button class="transition">css</button>
+                        <button class="transition">javascript</button>
+                        <button class="transition">babylonjs</button>
+                        <button class="transition">typescript</button>
+                        <button class="transition">angular</button>
+                    </div>
+                    <div class="back">
+                        <button class="transition">java</button>
+                        <button class="transition">junit</button>
+                        <button class="transition">mockito</button>
+                        <button class="transition">spring</button>
+                        <button class="transition">jenkins</button>
+                        <button class="transition">git</button>
+                        <button class="transition">xml</button>
+                        <button class="transition">xsd</button>
+                        <button class="transition">xslt</button>
+                        <button class="transition">sql</button>
+                        <button class="transition">mysql</button>
+                        <button class="transition">postgresql</button>
+                        <button class="transition">tomcat</button>
+                        <button class="transition">maven</button>
+                        <button class="transition">gradle</button>
+                        <button class="transition">hibernate</button>
+                    </div>
+                    <div class="software">
+                        <button class="transition">intellij</button>
+                        <button class="transition">eclipse</button>
+                        <button class="transition">visual studio code</button>
+                        <button class="transition">github</button>
+                        <button class="transition">gitlab</button>
+                        <button class="transition">postman</button>
+                        <button class="transition">figma</button>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <section id="portfolio" aria-labelledby="portfolio">
@@ -136,9 +187,9 @@
                     <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
                 <g class="parallax">
-                    <use xlink:href="#wave-path" x="50" y="3"></use>
-                    <use xlink:href="#wave-path" x="50" y="0"></use>
-                    <use xlink:href="#wave-path" x="50" y="9"></use>
+                    <use class="transition" xlink:href="#wave-path" x="50" y="3"></use>
+                    <use class="transition" xlink:href="#wave-path" x="50" y="0"></use>
+                    <use class="transition" xlink:href="#wave-path" x="50" y="9"></use>
                 </g>
             </svg>
         </section>

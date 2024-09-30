@@ -64,6 +64,14 @@ body {
     transition: var(--color-fade-time);
 }
 
+.transition {
+    -webkit-transition: var(--color-fade-time);
+    -moz-transition: var(--color-fade-time);
+    -ms-transition: var(--color-fade-time);
+    -o-transition: var(--color-fade-time);
+    transition: var(--color-fade-time);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -72,12 +80,6 @@ header {
     background: var(--primary);
     border-bottom: 1px solid var(--secondary);
     z-index: 1;
-    
-    -webkit-transition: var(--color-fade-time);
-    -moz-transition: var(--color-fade-time);
-    -ms-transition: var(--color-fade-time);
-    -o-transition: var(--color-fade-time);
-    transition: var(--color-fade-time);
 }
 
 nav {
@@ -117,12 +119,6 @@ nav > ul > li > a {
     padding: 0.75rem;
     text-decoration: none !important;
     text-transform: uppercase;
-    
-    -webkit-transition-duration: var(--color-fade-time);
-    -moz-transition-duration: var(--color-fade-time);
-    -ms-transition-duration: var(--color-fade-time);
-    -o-transition-duration: var(--color-fade-time);
-    transition-duration: var(--color-fade-time);
 }
 
 nav > ul > li > a:after {    
@@ -164,22 +160,10 @@ nav > a {
 
 #logo {
     filter: invert(1);
-    
-    -webkit-transition-duration: var(--color-fade-time);
-    -moz-transition-duration: var(--color-fade-time);
-    -ms-transition-duration: var(--color-fade-time);
-    -o-transition-duration: var(--color-fade-time);
-    transition-duration: var(--color-fade-time);
 }
 
 #logo.black {
     filter: invert(0);
-    
-    -webkit-transition-duration: var(--color-fade-time);
-    -moz-transition-duration: var(--color-fade-time);
-    -ms-transition-duration: var(--color-fade-time);
-    -o-transition-duration: var(--color-fade-time);
-    transition-duration: var(--color-fade-time);
 }
 
 main {
@@ -273,12 +257,6 @@ section {
     transform: rotate(45deg);
     border-right: 2px solid var(--font-color); 
     border-bottom: 2px solid var(--font-color);
-
-    -webkit-transition-duration: var(--color-fade-time);
-    -moz-transition-duration: var(--color-fade-time);
-    -ms-transition-duration: var(--color-fade-time);
-    -o-transition-duration: var(--color-fade-time);
-    transition-duration: var(--color-fade-time);
 }
 
 .down-arrow-1 {
@@ -424,6 +402,104 @@ section {
     transition-duration: var(--color-fade-time);
 }
 
+/* ---------------------------------------- Skills Section ---------------------------------------- */
+
+#skills > .container {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+
+    -webkit-transition-duration: 750ms;
+    -moz-transition-duration: 750ms;
+    -ms-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    transition-duration: 750ms;
+}
+
+#skills > .container.show {
+    opacity: 1;
+}
+
+.skills_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills_header > svg {
+    position: absolute;
+    z-index: -1;
+    transform: translateY(200px);
+}
+
+button.title {
+    border-radius: 6px;
+    border: 2px solid var(--border-color);
+    background: var(--primary);
+    padding: 15px 70px;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.technologies {
+    display: grid;
+    height: 60%;
+    margin: 25px;
+    grid-template-columns: repeat(3, 1fr);;
+    grid-template-rows: repeat(2, 1fr);;
+}
+
+.front, .back, .software {
+    align-content: flex-start;
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.front {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.back {
+    justify-content: flex-end;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.software {
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.technologies button {
+    height: 30px;
+    padding: 5px;
+    border: 2px solid var(--card-border-color);
+    border-radius: 5px;
+    background: var(--card-bg-color);
+    color: var(--font-color);
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    
+    &:hover {
+        box-shadow: 0px 5px 10px 3px var(--border-color);
+    }
+}
+
+#tree_gradient {
+    stop-color: var(--primary);
+}
+
 /* ---------------------------------------- Portfolio Section ---------------------------------------- */
 
 #portfolio {
@@ -486,12 +562,12 @@ section {
     -ms-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
-}
-
-.card:hover {
-    color: var(--font-color);
-    box-shadow: 0px 5px 10px 3px var(--border-color);
-    opacity: 1;
+    
+    &:hover {
+        color: var(--font-color);
+        box-shadow: 0px 5px 10px 3px var(--border-color);
+        opacity: 1;
+    }
 }
 
 .card div:has(img) {
@@ -544,12 +620,6 @@ section {
     -ms-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
     -o-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-
-    -webkit-transition-duration: var(--color-fade-time);
-    -moz-transition-duration: var(--color-fade-time);
-    -ms-transition-duration: var(--color-fade-time);
-    -o-transition-duration: var(--color-fade-time);
-    transition-duration: var(--color-fade-time);
 }
 
 .parallax > use:nth-child(1) {
