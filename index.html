@@ -11,6 +11,7 @@
     <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./src/style.css">
 
+    <script src="./src/tagCanvas.js"></script>
     <script src="./src/script.js" defer></script>
     <script src="https://kit.fontawesome.com/47c7c2c1bd.js" crossorigin="anonymous"></script>
 
@@ -114,56 +115,28 @@
 
         <section id="skills" aria-labelledby="skills">
             <div class="container">
-                <div class="skills_header">
-                    <button class="title transition"><span class="text">MY SKILLS</span></button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="744" height="423" viewBox="0 0 744 423" fill="none">
-                        <path d="M2 126.5V86H258V0M366.5 422.5V0M741.5 133V86H481.5V0" stroke="url(#paint_linear)" stroke-width="4"></path>
-                        <defs>
-                            <linearGradient id="paint_linear" x1="371.963" y1="12" x2="359.62" y2="389.388" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#f26419"></stop>
-                                <stop id="tree_gradient" class="transition" offset="1" stop-opacity="0"></stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="technologies">
-                    <div class="front">
-                        <button class="transition">html</button>
-                        <button class="transition">css</button>
-                        <button class="transition">javascript</button>
-                        <button class="transition">babylonjs</button>
-                        <button class="transition">typescript</button>
-                        <button class="transition">angular</button>
-                    </div>
-                    <div class="back">
-                        <button class="transition">java</button>
-                        <button class="transition">junit</button>
-                        <button class="transition">mockito</button>
-                        <button class="transition">spring</button>
-                        <button class="transition">jenkins</button>
-                        <button class="transition">git</button>
-                        <button class="transition">xml</button>
-                        <button class="transition">xsd</button>
-                        <button class="transition">xslt</button>
-                        <button class="transition">sql</button>
-                        <button class="transition">mysql</button>
-                        <button class="transition">postgresql</button>
-                        <button class="transition">tomcat</button>
-                        <button class="transition">maven</button>
-                        <button class="transition">gradle</button>
-                        <button class="transition">hibernate</button>
-                    </div>
-                    <div class="software">
-                        <button class="transition">intellij</button>
-                        <button class="transition">eclipse</button>
-                        <button class="transition">visual studio code</button>
-                        <button class="transition">github</button>
-                        <button class="transition">gitlab</button>
-                        <button class="transition">postman</button>
-                        <button class="transition">figma</button>
-                    </div>
-                </div>
-            </div>
+                <canvas width="500" height="500" id="tagCloud">
+                  <!-- Anything in here will be replaced on browsers that support the canvas element -->
+                </canvas>
+              </div>
+              <div id="tags">
+                <ul>
+                  <li><a href="">HTML</a></li>
+                  <li><a href="">CSS</a></li>
+                  <li><a href="">Javascript</a></li>
+                  <li><a href="">babylonjs</a></li>
+                  <li><a href="">typescript</a></li>
+                  <li><a href="">angular</a></li>
+                  <li><a href="">java</a></li>
+                  <li><a href="">junit</a></li>
+                  <li><a href="">mockito</a></li>
+                  <li><a href="">spring</a></li>
+                  <li><a href="">jenkins</a></li>
+                  <li><a href="">git</a></li>
+                  <li><a href="">xml</a></li>
+                  <li><a href="">sql</a></li>
+                </ul>
+              </div>
         </section>
         
         <section id="portfolio" aria-labelledby="portfolio">

@@ -189,3 +189,20 @@ document.querySelectorAll(".nav-link").forEach(link => {
         animation();
     });
 });
+
+/* ---------------------------------------- TagCanvas ---------------------------------------- */
+
+window.onload = function() {
+    try {
+      TagCanvas.Start('tagCloud','tags',{
+        textColour: '#f26419',
+        outlineColour: '#212529',
+        reverse: false,
+        depth: 0.5,
+        maxSpeed: 0.05
+      });
+    } catch(e) {
+      // something went wrong, hide the canvas container
+      document.getElementById('myCanvasContainer').style.display = 'none';
+    }
+  };
