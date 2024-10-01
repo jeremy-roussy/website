@@ -1,7 +1,7 @@
-const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const particlesCanvas = document.getElementById("particlesCanvas");
+const context = particlesCanvas.getContext("2d");
+particlesCanvas.width = window.innerWidth;
+particlesCanvas.height = window.innerHeight;
 
 let particlesArray;
 
@@ -23,11 +23,11 @@ class Particle {
     }
 
     update() {
-        if(this.x > canvas.width || this.x < 0) {
+        if(this.x > particlesCanvas.width || this.x < 0) {
             this.directionX = -this.directionX;
         }
 
-        if(this.y > canvas.height || this.y < 0) {
+        if(this.y > particlesCanvas.height || this.y < 0) {
             this.directionY = -this.directionY;
         }
 
@@ -39,7 +39,7 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 8000;
+    let numberOfParticles = (particlesCanvas.height * particlesCanvas.width) / 8000;
 
     for(let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 5) + 1;
@@ -69,7 +69,7 @@ function connect() {
     for(let i = 0; i < particlesArray.length; i++) {
         for(let j = i; j < particlesArray.length; j++) {
             let distance = (Math.pow((particlesArray[i].x - particlesArray[j].x), 2) + Math.pow((particlesArray[i].y - particlesArray[j].y), 2));
-            if(distance < (canvas.width / 5) * (canvas.height / 5)) {
+            if(distance < (particlesCanvas.width / 5) * (particlesCanvas.height / 5)) {
                 opacity = 1 - (distance / 20000);
                 context.strokeStyle = "rgba(242, 100, 25," + opacity + ")";
 
@@ -84,8 +84,8 @@ function connect() {
 }
 
 window.addEventListener("resize", function() {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    particlesCanvas.width = innerWidth;
+    particlesCanvas.height = innerHeight;
     init();
 });
 
