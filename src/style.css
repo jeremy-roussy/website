@@ -672,7 +672,7 @@ button.title {
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
+  color: var(--primary);
   border-radius: 10px;
   display: block;
   border: 0px;
@@ -688,7 +688,6 @@ button.title {
 
 .resume_button:hover {
   background-position: right center;
-  color: #fff;
   text-decoration: none;
 }
 
